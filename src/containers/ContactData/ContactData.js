@@ -111,7 +111,7 @@ class ContactData extends Component {
          
             this.props.onPurchaseInit(order);
             
-            this.props.history.push('/orders');
+            this.props.history.push(`${process.env.PUBLIC_URL}/orders`);
         
             
     }
