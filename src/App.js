@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Route } from 'react-router-dom';
+import { Route, Redirect} from 'react-router-dom';
 
 
 import Layout from './components/Layout/Layout'; 
@@ -15,6 +15,7 @@ class App extends Component {
         <Route path='/' exact component={BurgerBuilder} />
         <Route path='/checkout' component={Checkout} />
         <Route path='/orders' component={Orders} />
+        <Redirect from='/burger' to='/' />
       </Layout>
     )
   }
