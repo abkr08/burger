@@ -32,7 +32,7 @@ class BurgerBuilder extends Component {
 
     purchaseContinueHandler = () => {
         this.setState({loading: true});
-        this.props.history.push('/checkout');
+        this.props.history.push(`${process.env.PUBLIC_URL}/checkout`);
     }
     
 

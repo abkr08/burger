@@ -5,7 +5,7 @@ import burgerLogo from '../../assets/images/Logo.png';
 import classes from './Logo.css'; 
 
 const logo = ( props ) => (
-    <Link to='/'>
+    <Link to={`${process.env.PUBLIC_URL}/`}>
     <div className = {classes.Logo}>
         <img src = {burgerLogo} alt='myBurgerLogo'/>
     </div>

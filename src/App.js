@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { Route, Redirect} from 'react-router-dom';
+import { Route } from 'react-router-dom';
+
 
 
 import Layout from './components/Layout/Layout'; 
@@ -12,10 +13,11 @@ class App extends Component {
   render() {
     return (
       <Layout> 
-        <Route path='/' exact component={BurgerBuilder} />
-        <Route path='/checkout' component={Checkout} />
-        <Route path='/orders' component={Orders} />
-        <Redirect from='/burger' to='/' />
+       
+        <Route path={`${process.env.PUBLIC_URL}/`} exact component={BurgerBuilder} />
+        <Route path={`${process.env.PUBLIC_URL}/checkout`} component={Checkout} />
+        <Route path={`${process.env.PUBLIC_URL}/orders`} component={Orders} />
+      
       </Layout>
     )
   }

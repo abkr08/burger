@@ -15,7 +15,7 @@ class Checkout extends Component {
     }
 
     checkoutContinuedHandler = () => {
-        this.props.history.replace('/checkout/contact-form');
+        this.props.history.replace(`${process.env.PUBLIC_URL}/checkout/contact-form`);
     }
     render () {
         return (
